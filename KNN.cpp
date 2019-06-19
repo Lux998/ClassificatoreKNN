@@ -22,3 +22,8 @@ KNN::KNN(const KNN& orig) {
 KNN::~KNN() {
 }
 
+
+virtual std::string Classify(Documento d)
+{
+    
+}
