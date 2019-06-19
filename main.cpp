@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
     SaveFile.close();
     Documento d("ciao.txt");
     d.stampa();
-
+       //Ciao
     return 0;
 }
 
