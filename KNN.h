@@ -14,7 +14,7 @@
 #ifndef KNN_H
 #define KNN_H
 
-class KNN {
+class KNN : public Classificatore{
 public:
     KNN();
     KNN(const KNN& orig);
