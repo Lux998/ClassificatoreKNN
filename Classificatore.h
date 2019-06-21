@@ -17,8 +17,8 @@
 class Classificatore {
 public:
     virtual std::string Classify(Documento d);
-private:
-
+protected:
+    float Distanza(std::string tipo,Documento d1,Documento d2);
 };
 
 #endif /* CLASSIFICATORE_H */
