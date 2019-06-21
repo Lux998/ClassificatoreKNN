@@ -12,6 +12,7 @@
  */
 
 #include "Classificatore.h"
+#include "Documento.h"
 virtual std::string Classificatore::Classify(Documento d)=0;
 
 float Classificatore::Distanza(std::string tipo, Documento d1, Documento d2) {
@@ -32,7 +33,14 @@ float Classificatore::Distanza(std::string tipo, Documento d1, Documento d2) {
          
          Σ A(k)B(k) / (ΣA(k)^2)^1/2 (ΣB(k)^2)^1/2
          
-         */            
-    }
+         */
+        std::map<std::string,int>::const_iterator iter;
+        
+        for(iter=d1.getBag().begin(); iter!=d1.getBag().end(); ++iter)
+        {
+            ()
+        }
+  }
 }
+
 

@@ -30,3 +30,7 @@ void Documento::stampa() const {
    std::cout<<iter->first<<" --> "<<iter->second<<std::endl;
   }
 }
+
+std::map<std::string, int> Documento::getBag() const {
+    return this->bag;
+}
