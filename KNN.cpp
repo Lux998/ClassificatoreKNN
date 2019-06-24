@@ -13,13 +13,16 @@
 
 #include "KNN.h"
 
-KNN::KNN() {
+KNN::KNN()
+{
 }
 
-KNN::KNN(const KNN& orig) {
+KNN::KNN(const KNN& orig)
+{
 }
 
-KNN::~KNN() {
+KNN::~KNN()
+{
 }
 
 

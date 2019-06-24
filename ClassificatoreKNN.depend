@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1561389203 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\main.cpp
+	<cstdlib>
+	"Documento.h"
+
+1561386271 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.h
+	<map>
+	<string>
+	<fstream>
+	<iostream>
+

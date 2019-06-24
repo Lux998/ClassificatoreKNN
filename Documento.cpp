@@ -1,9 +1,10 @@
 
 #include "Documento.h"
 
-Documento::Documento(const std::string& FILE) {
+Documento::Documento(const std::string& FILE)
+{
     std::string word;
-    std::ifstream is(FILE);
+    std::ifstream is(FILE.c_str());
     categoria="";
     if(!is.good())
     {
@@ -16,21 +17,25 @@ Documento::Documento(const std::string& FILE) {
 }
 
 
-Documento::Documento(const Documento& orig) {
+Documento::Documento(const Documento& orig)
+{
 }
 
-Documento::~Documento() {
+Documento::~Documento()
+{
 }
 
-void Documento::stampa() const {
-  std::map<std::string,int>::const_iterator iter;
-  
-  for(iter=bag.begin(); iter!=bag.end(); ++iter)
-  {
-   std::cout<<iter->first<<" --> "<<iter->second<<std::endl;
-  }
+void Documento::stampa() const
+{
+    std::map<std::string,int>::const_iterator iter;
+
+    for(iter=bag.begin(); iter!=bag.end(); ++iter)
+    {
+        std::cout<<iter->first<<" --> "<<iter->second<<std::endl;
+    }
 }
 
-std::map<std::string, int> Documento::getBag() const {
+std::map<std::string, int> Documento::getBag() const
+{
     return this->bag;
 }

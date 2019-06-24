@@ -15,7 +15,8 @@
 #define CLASSIFICATORE_H
 #include<string>
 #include "Documento.h"
-class Classificatore {
+class Classificatore
+{
 public:
     virtual std::string Classify(Documento d)=0;
 protected:

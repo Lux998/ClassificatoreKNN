@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   Documento.h
  * Author: lucap
  *
@@ -17,7 +17,8 @@
 #include <string>
 #include <fstream>
 #include <iostream>
-class Documento {
+class Documento
+{
 public:
     Documento(const std::string& FILE);
     Documento(const Documento& orig);

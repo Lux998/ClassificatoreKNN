@@ -13,13 +13,16 @@
 
 #include "Classificatore.h"
 #include "Documento.h"
+#include<math.h>
 //std::string Classificatore::Classify(Documento d)=0;
 
-float Classificatore::Distanza(int tipo, Documento d1, Documento d2) {
-
-        switch(tipo)
+float Classificatore::Distanza(int tipo, Documento d1, Documento d2)
+{
+    float numerator,den1,den2;
+    float result=0;
+    switch(tipo)
     {
-        case 0://cos
+    case 0://cos
         /*
          Il contenuto dei due vettori è la frequenza dei termini, ossia il numero di
          volte in cui una certa parola ricorre all'interno del testo.
@@ -38,9 +41,18 @@ float Classificatore::Distanza(int tipo, Documento d1, Documento d2) {
 
         for(iter=d1.getBag().begin(); iter!=d1.getBag().end(); ++iter)
         {
-
+            std::string word=iter->first;
+            if(d1.getBag()[word]==0 || d2.getBag()[word]==0)
+            {
+                continue;
+            }
+            numerator+=d1.getBag()[word]*d2.getBag()[word];
+            den1+=d1.getBag()[word]^2;
+            den2+=d2.getBag()[word]^2;
         }
-  }
+        result=(numerator)/(sqrt(den1)*sqrt(den2));
+
+    }
 }
 
 
