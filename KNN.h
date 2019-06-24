@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   KNN.h
  * Author: lucap
  *
@@ -13,8 +13,10 @@
 
 #ifndef KNN_H
 #define KNN_H
-
-class KNN : public Classificatore{
+#include<string>
+#include "Classificatore.h"
+class KNN : public Classificatore
+{
 public:
     KNN();
     KNN(const KNN& orig);

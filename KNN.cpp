@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   KNN.cpp
  * Author: lucap
- * 
+ *
  * Created on 19 giugno 2019, 12.40
  */
 
@@ -23,7 +23,7 @@ KNN::~KNN() {
 }
 
 
-virtual std::string Classify(Documento d)
+std::string KNN::Classify(Documento d)
 {
-    
+
 }

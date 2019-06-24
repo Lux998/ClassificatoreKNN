@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   Classificatore.h
  * Author: lucap
  *
@@ -13,12 +13,13 @@
 
 #ifndef CLASSIFICATORE_H
 #define CLASSIFICATORE_H
-
+#include<string>
+#include "Documento.h"
 class Classificatore {
 public:
-    virtual std::string Classify(Documento d);
+    virtual std::string Classify(Documento d)=0;
 protected:
-    float Distanza(std::string tipo,Documento d1,Documento d2);
+    float Distanza(int tipo,Documento d1,Documento d2);
 };
 
 #endif /* CLASSIFICATORE_H */
