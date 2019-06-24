@@ -19,6 +19,11 @@ Documento::Documento(const std::string& FILE)
 
 Documento::Documento(const Documento& orig)
 {
+    std::map<std::string,int>::iterator iter;
+    for(iter=orig.getBag().begin(); iter!=orig.getBag().end(); ++iter)
+    {
+        bag[iter->first]==orig.getBag()[iter->first];
+    }
 }
 
 Documento::~Documento()

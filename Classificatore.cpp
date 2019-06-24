@@ -18,7 +18,9 @@
 
 float Classificatore::Distanza(int tipo, Documento d1, Documento d2)
 {
-    float numerator,den1,den2;
+    float numerator=0;
+    float den1=0;
+    float den2=0;
     float result=0;
     switch(tipo)
     {
@@ -37,13 +39,17 @@ float Classificatore::Distanza(int tipo, Documento d1, Documento d2)
          Σ A(k)B(k) / (ΣA(k)^2)^1/2 (ΣB(k)^2)^1/2
 
          */
-        std::map<std::string,int>::const_iterator iter;
-
-        for(iter=d1.getBag().begin(); iter!=d1.getBag().end(); ++iter)
+        d1.stampa();
+        std::map<std::string,int>::iterator iter;
+        iter=d1.getBag().begin();
+        std::cout<<"ITER??"<<iter->first<<std::endl;
+        for(iter=d1.getBag().begin(); iter!=d1.getBag().end(); iter++)
         {
+            std::cout << "WORD:"<< iter->first <<"----second: "<< iter->second <<std::endl;
             std::string word=iter->first;
             if(d1.getBag()[word]==0 || d2.getBag()[word]==0)
             {
+                std::cout<<"SKIPPING 0 : " << word<<std::endl;
                 continue;
             }
             numerator+=d1.getBag()[word]*d2.getBag()[word];
@@ -51,7 +57,8 @@ float Classificatore::Distanza(int tipo, Documento d1, Documento d2)
             den2+=d2.getBag()[word]^2;
         }
         result=(numerator)/(sqrt(den1)*sqrt(den2));
-
+        std::cout<< std::endl<<"RISULTATO : "<<result;
+        return result;
     }
 }
 

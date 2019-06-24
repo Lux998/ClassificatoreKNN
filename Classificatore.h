@@ -19,7 +19,7 @@ class Classificatore
 {
 public:
     virtual std::string Classify(Documento d)=0;
-protected:
+//protected:
     float Distanza(int tipo,Documento d1,Documento d2);
 };
 
