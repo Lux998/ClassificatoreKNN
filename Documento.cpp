@@ -19,11 +19,16 @@ Documento::Documento(const std::string& FILE)
 
 Documento::Documento(const Documento& orig)
 {
+    /*
     std::map<std::string,int>::iterator iter;
+    std::cout<<"copio cose"<<std::endl;
     for(iter=orig.getBag().begin(); iter!=orig.getBag().end(); ++iter)
     {
+        std::cout<<iter->first <<std::endl;
+
         bag[iter->first]==orig.getBag()[iter->first];
-    }
+    }*/
+    bag=orig.getBag();
 }
 
 Documento::~Documento()

@@ -16,12 +16,39 @@
 #include<math.h>
 //std::string Classificatore::Classify(Documento d)=0;
 
+std::vector<std::string> Classificatore::GetCommonKeys(std::map<std::string,int> m1,std::map<std::string,int> m2) const
+{
+    std::map<std::string,int>::iterator iter1=m1.begin();
+    std::map<std::string,int>::iterator iter2=m2.begin();
+    std::vector<std::string> couples;
+    while(iter1!=m1.end())
+    {
+        iter2=m2.begin();
+        while(iter2!=m2.end())
+        {
+            if(iter1->first.compare(iter2->first)==0)
+            {
+                couples.push_back(iter1->first);
+                break;
+            }else
+            iter2++;
+        }
+        iter1++;
+    }
+    return couples;
+
+}
+
 float Classificatore::Distanza(int tipo, Documento d1, Documento d2)
 {
     float numerator=0;
     float den1=0;
     float den2=0;
     float result=0;
+    std::cout<< "iniziamo :"<<std::endl;
+    std::map<std::string,int>::iterator iter1;
+    std::map<std::string,int>::iterator iter2;
+    std::string word;
     switch(tipo)
     {
     case 0://cos
@@ -39,27 +66,41 @@ float Classificatore::Distanza(int tipo, Documento d1, Documento d2)
          Σ A(k)B(k) / (ΣA(k)^2)^1/2 (ΣB(k)^2)^1/2
 
          */
-        d1.stampa();
-        std::map<std::string,int>::iterator iter;
-        iter=d1.getBag().begin();
-        std::cout<<"ITER??"<<iter->first<<std::endl;
-        for(iter=d1.getBag().begin(); iter!=d1.getBag().end(); iter++)
+        // d1.stampa();
+        try
         {
-            std::cout << "WORD:"<< iter->first <<"----second: "<< iter->second <<std::endl;
-            std::string word=iter->first;
-            if(d1.getBag()[word]==0 || d2.getBag()[word]==0)
+            for (iter1=d1.getBag().begin(); iter1!=d1.getBag().end(); iter1++)
             {
-                std::cout<<"SKIPPING 0 : " << word<<std::endl;
-                continue;
+                for(iter2=d2.getBag().begin(); iter2!=d2.getBag().end(); iter2++)
+                {
+                    if(iter1->first.compare(iter2->first)==0)
+                    {
+                        word=iter1->first;
+                        std::cout<<"PAROLA "<<word<<std::endl;
+                        break;
+                    }
+                    else
+                    {
+                        std::cout<<"passo al prossimo"<<std::endl;
+                    }
+                }
+                numerator+=d1.getBag().at(word)*d2.getBag().at(word);
+                std::cout<<"NUMERATORE " << numerator<<std::endl;
+                den1+=d1.getBag().at(word)*d1.getBag().at(word);
+                std::cout<<"DEN1 " << den1<<std::endl;
+                den2+=d1.getBag().at(word)*d2.getBag().at(word);
+                std::cout<<"DEN2 " << den2 <<std::endl;
             }
-            numerator+=d1.getBag()[word]*d2.getBag()[word];
-            den1+=d1.getBag()[word]^2;
-            den2+=d2.getBag()[word]^2;
         }
-        result=(numerator)/(sqrt(den1)*sqrt(den2));
-        std::cout<< std::endl<<"RISULTATO : "<<result;
-        return result;
+        catch(std::exception e)
+        {
+            std::cerr<<"CIAUZZZ";
+        }
     }
+    result=(numerator)/(sqrt(den1)*sqrt(den2));
+    std::cout<< std::endl<<"RISULTATO : "<<result;
+    return result;
+
 }
 
 

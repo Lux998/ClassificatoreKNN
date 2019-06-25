@@ -30,8 +30,15 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++11" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Classificatore.cpp" />
+		<Unit filename="Classificatore.h" />
+		<Unit filename="Documento.cpp" />
+		<Unit filename="Documento.h" />
+		<Unit filename="KNN.cpp" />
+		<Unit filename="KNN.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

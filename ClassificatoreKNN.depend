@@ -1,11 +1,32 @@
 # depslib dependency file v1.0
-1561389203 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\main.cpp
+1561468978 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\main.cpp
 	<cstdlib>
 	"Documento.h"
+	"KNN.h"
 
-1561386271 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.h
+1561393188 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.h
 	<map>
 	<string>
 	<fstream>
 	<iostream>
+
+1561470005 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.cpp
+	"Classificatore.h"
+	"Documento.h"
+	<math.h>
+
+1561469942 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.h
+	<string>
+	<vector>
+	"Documento.h"
+
+1561465274 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.cpp
+	"Documento.h"
+
+1561390796 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.cpp
+	"KNN.h"
+
+1561387511 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.h
+	<string>
+	"Classificatore.h"
 
