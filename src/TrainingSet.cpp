@@ -29,16 +29,19 @@ TrainingSet::~TrainingSet()
 void TrainingSet::aggiungiDocPolitica(const std::string& file,const std::string& cat)
 {
     vecPolitica.push_back(new Documento(file,cat));
+    std::cout<<vecPolitica.back()->getCategoria()<<std::endl;
 }
 
 void TrainingSet::aggiungiDocSport(const std::string& file,const std::string& cat)
 {
     vecSport.push_back(new Documento(file,cat));
+    std::cout<<vecSport.back()->getCategoria()<<std::endl;
 }
 
 void TrainingSet::aggiungiDocFinanza(const std::string& file,const std::string& cat)
 {
     vecFinanza.push_back(new Documento(file,cat));
+    std::cout<<vecFinanza.back()->getCategoria()<<std::endl;
 }
 
 std::vector<Documento*> TrainingSet::getVecPolitica() const

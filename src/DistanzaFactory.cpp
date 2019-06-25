@@ -16,5 +16,9 @@ Distanza* DistanzaFactory::Set(const std::string& typeofDistance)
     {
         d=new DistanzaCos();
     }
+    if(typeofDistance=="euc")
+    {
+        d=new DistanzaEuclidea();
+    }
     return d;
 }

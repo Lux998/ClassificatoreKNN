@@ -6,13 +6,13 @@
 
 class DistanzaEuclidea : public Distanza
 {
-    public:
-        DistanzaEuclidea();
-        virtual ~DistanzaEuclidea();
-        double getDistanza(Documento d1,Documento d2);
-    protected:
+public:
+    DistanzaEuclidea();
+    virtual ~DistanzaEuclidea();
+    double getDistanza(Documento d1,Documento d2);
+protected:
 
-    private:
+private:
 
 };
 

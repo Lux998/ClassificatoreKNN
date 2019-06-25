@@ -28,59 +28,65 @@ KNN::~KNN()
 
 std::string KNN::Classify(Documento doc,const std::string& tipo)
 {
+    double mediaMin;
     dist=DistanzaFactory().Set(tipo);
-    TrainingSet TS();
+    TrainingSet TS = TrainingSet();
 
     std::vector<Documento*> vecFinanza = TS.getVecFinanza();
-    std::vector<Documento*> vecSport = TS.getVecPolitica();
-    std::vector<Documento*> vecPolitica = TS.getVecSport();
+    std::vector<Documento*> vecSport = TS.getVecSport();
+    std::vector<Documento*> vecPolitica = TS.getVecPolitica();
 
     std::vector<double> distanzeFinanza(vecFinanza.size());
     std::vector<double> distanzeSport(vecSport.size());
-    std::vector<double> distanzePolitca(vecPolitica.size());
+    std::vector<double> distanzePolitica(vecPolitica.size());
 
-    for(int i = 0;i<vecFinanza.size();i++)
+    for(unsigned int i = 0; i<vecFinanza.size(); i++)
     {
-        distanzeFinanza[i] = dist.getDistanza(doc,vecFinanza[i]);
+        distanzeFinanza[i] = dist->getDistanza(doc,*vecFinanza[i]);
+        std::cout<<"DISTANZA FINANZA "<<distanzeFinanza[i]<< std::endl;
     }
 
-    for(int i = 0;i<vecSport.size();i++)
+    for(unsigned int i = 0; i<vecSport.size(); i++)
     {
-        distanzeSport[i] = dist.getDistanza(doc,vecSport[i]);
+        distanzeSport[i] = dist->getDistanza(doc,*vecSport[i]);
+        std::cout<<"DISTANZA SPORT "<<distanzeSport[i]<< std::endl;
     }
 
-    for(int i = 0;i<vecPolitica.size();i++)
+    for(unsigned int i = 0; i<vecPolitica.size(); i++)
     {
-        distanzePolitca[i] = dist.getDistanza(doc,vecPolitica[i]);
+        distanzePolitica[i] = dist->getDistanza(doc,*vecPolitica[i]);
+        std::cout<<"DISTANZA POL "<<distanzePolitica[i]<< std::endl;
     }
 
     double mediaFinanza = 0;
     double mediaSport = 0;
     double mediaPolitica = 0;
 
-    for(int i = 0;i<distanzeFinanza.size();i++)
+    for(unsigned int i = 0; i<distanzeFinanza.size(); i++)
     {
         mediaFinanza+=distanzeFinanza[i];
     }
     mediaFinanza = mediaFinanza/distanzeFinanza.size();
 
-    for(int i = 0;i<distanzeSport.size();i++)
+    for(unsigned int i = 0; i<distanzeSport.size(); i++)
     {
         mediaSport+=distanzeSport[i];
     }
     mediaSport = mediaSport/distanzeSport.size();
 
-    for(int i = 0;i<distanzePolitica.size();i++)
+    for(unsigned int i = 0; i<distanzePolitica.size(); i++)
     {
-        mediaPolitica+=distanzePolitca[i];
+        mediaPolitica+=distanzePolitica[i];
     }
-    mediaPolitica = mediaPolitica/distanzePolitca.size();
-
-    switch(std::min(std::min(mediaFinanza,mediaSport),mediaPolitica))
-    case mediaFinanza:
+    mediaPolitica = mediaPolitica/distanzePolitica.size();
+    mediaMin=std::max(std::max(mediaFinanza,mediaPolitica),mediaSport);
+    std::cout<<"MEDIA F: "<<mediaFinanza<<" MEDIA P: "<<mediaPolitica<<"MEDIA S: "<< mediaSport<<std::endl;
+    if(mediaMin==mediaFinanza)
         return "finanza";
-    case mediaPolitica:
-        return "politca";
-    case mediaSport:
+    else if(mediaMin==mediaSport)
         return "sport";
+    else if(mediaMin==mediaPolitica)
+        return "politica";
+        else
+            return "errore errore";
 }

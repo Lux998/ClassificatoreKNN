@@ -64,3 +64,11 @@ std::map<std::string, int> Documento::getBag() const
 {
     return this->bag;
 }
+void Documento::setCategoria(const std::string& cat)
+{
+    categoria=cat;
+}
+std::string Documento::getCategoria()
+{
+    return categoria;
+}

@@ -16,7 +16,7 @@ double DistanzaCos::getDistanza(Documento d1,Documento d2)
     double den1=0.0;
     double den2=0.0;
     double result;
-    std::cout<< "iniziamo :"<<std::endl;
+    //std::cout<< "iniziamo :"<<std::endl;
     std::vector<std::string> words;
     /*
         Il contenuto dei due vettori è la frequenza dei termini, ossia il numero di
@@ -35,21 +35,22 @@ double DistanzaCos::getDistanza(Documento d1,Documento d2)
     words=GetCommonKeys(d1.getBag(),d2.getBag());
     if(words.size()==0)
     {
-        //  return 0;
+
+          return 0;
     }
     for(unsigned int i=0; i<words.size(); ++i)
     {
         numerator+=d1.getBag().at(words[i])*d2.getBag().at(words[i]);
-        std::cout<<"NUMERATORE " << numerator<<std::endl;
+      //  std::cout<<"NUMERATORE " << numerator<<std::endl;
         den1+=d1.getBag().at(words[i])*d1.getBag().at(words[i]);
-        std::cout<<"DEN1 " << den1<<std::endl;
+     //   std::cout<<"DEN1 " << den1<<std::endl;
         den2+=d2.getBag().at(words[i])*d2.getBag().at(words[i]);
-        std::cout<<"DEN2 " << den2 <<std::endl;
+    //    std::cout<<"DEN2 " << den2 <<std::endl;
     }
 
 
     result =(numerator)/(sqrt(den1)*sqrt(den2));
-    //std::cout<< std::endl<<"RISULTATO : "<<result;
+    std::cout<< std::endl<<"RISULTATO : "<<result<<std::endl;
     return result;
 }
 

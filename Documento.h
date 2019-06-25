@@ -23,10 +23,11 @@ public:
     Documento(const std::string& FILE);
     Documento(const std::string& FILE, const std::string& cat);
     Documento(const Documento& orig);
+    void setCategoria(const std::string& cat);
     virtual ~Documento();
     void stampa() const;
     std::map<std::string,int> getBag() const;
-
+    std::string getCategoria();
 private:
     std::map<std::string,int> bag;
     std::string categoria;
