@@ -16,12 +16,12 @@
 #include<string>
 #include<vector>
 #include "Documento.h"
+#include<math.h>
 class Classificatore
 {
 public:
-    virtual std::string Classify(Documento d)=0;
+    virtual std::string Classify(Documento d,const std::string& tipo)=0;
 //protected:
-    double Distanza(int tipo,Documento d1,Documento d2);
 
 };
 

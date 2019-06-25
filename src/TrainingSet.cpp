@@ -1,6 +1,5 @@
 #include "TrainingSet.h"
-#include <vector>
-#include <fstream>
+
 
 std::vector<Documento*> vec;
 

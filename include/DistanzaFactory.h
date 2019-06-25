@@ -5,13 +5,13 @@
 #include"DistanzaCos.h"
 class DistanzaFactory
 {
-    public:
-        DistanzaFactory();
-        virtual ~DistanzaFactory();
-        static Distanza* Set(const std::string& typeofDistance);
-    protected:
+public:
+    DistanzaFactory();
+    virtual ~DistanzaFactory();
+    static Distanza* Set(const std::string& typeofDistance);
+protected:
 
-    private:
+private:
 };
 
 #endif // DISTANZAFACTORY_H
