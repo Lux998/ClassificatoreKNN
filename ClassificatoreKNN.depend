@@ -30,3 +30,34 @@
 	<string>
 	"Classificatore.h"
 
+1561473364 source:c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.cpp
+	"Classificatore.h"
+	"Documento.h"
+	<math.h>
+
+1561473364 c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.h
+	<string>
+	<vector>
+	"Documento.h"
+
+1561394687 c:\users\basi\documents\progettoknn\classificatoreknn\documento.h
+	<map>
+	<string>
+	<fstream>
+	<iostream>
+
+1561473364 source:c:\users\basi\documents\progettoknn\classificatoreknn\documento.cpp
+	"Documento.h"
+
+1561394687 source:c:\users\basi\documents\progettoknn\classificatoreknn\knn.cpp
+	"KNN.h"
+
+1561388341 c:\users\basi\documents\progettoknn\classificatoreknn\knn.h
+	<string>
+	"Classificatore.h"
+
+1561473364 source:c:\users\basi\documents\progettoknn\classificatoreknn\main.cpp
+	<cstdlib>
+	"Documento.h"
+	"KNN.h"
+
