@@ -20,12 +20,7 @@ int main(int argc, char** argv)
     D1.stampa();
     D2.stampa();
     KNN knn;
-    ciao = knn.GetCommonKeys(D1.getBag(),D2.getBag());
-    for(int i=0;i<ciao.size();i++)
-    {
-        std::cout<<ciao[i]<<std::endl;
-    }
-   // std::cout << knn.Distanza(0,D1,D2);
+    std::cout << knn.Distanza(0,D1,D2);
 
     //Ciao
     return 0;
