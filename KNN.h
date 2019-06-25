@@ -21,7 +21,7 @@ public:
     KNN();
     KNN(const KNN& orig);
     virtual ~KNN();
-    virtual std::string Classify(Documento D);
+    virtual std::string Classify(Documento D,const std::string& tipo);
 private:
 
 };
