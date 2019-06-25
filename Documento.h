@@ -21,6 +21,7 @@ class Documento
 {
 public:
     Documento(const std::string& FILE);
+    Documento(const std::string& FILE, const std::string& cat);
     Documento(const Documento& orig);
     virtual ~Documento();
     void stampa() const;

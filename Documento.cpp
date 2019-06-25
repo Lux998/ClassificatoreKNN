@@ -16,6 +16,21 @@ Documento::Documento(const std::string& FILE)
     }
 }
 
+Documento::Documento(const std::string& FILE, const std::string& cat)
+{
+    std::string word;
+    std::ifstream is(FILE.c_str());
+    categoria=cat;
+    if(!is.good())
+    {
+        throw std::string("File no bueno");
+    }
+    while(is>>word)
+    {
+        bag[word]++;
+    }
+}
+
 
 Documento::Documento(const Documento& orig)
 {

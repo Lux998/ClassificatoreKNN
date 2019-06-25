@@ -40,13 +40,13 @@
 	<vector>
 	"Documento.h"
 
-1561394687 c:\users\basi\documents\progettoknn\classificatoreknn\documento.h
+1561475223 c:\users\basi\documents\progettoknn\classificatoreknn\documento.h
 	<map>
 	<string>
 	<fstream>
 	<iostream>
 
-1561473364 source:c:\users\basi\documents\progettoknn\classificatoreknn\documento.cpp
+1561475162 source:c:\users\basi\documents\progettoknn\classificatoreknn\documento.cpp
 	"Documento.h"
 
 1561394687 source:c:\users\basi\documents\progettoknn\classificatoreknn\knn.cpp
