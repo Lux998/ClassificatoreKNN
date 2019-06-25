@@ -5,7 +5,6 @@
 #include <fstream>
 class TrainingSet
 {
-<<<<<<< HEAD
     public:
         TrainingSet();
         virtual ~TrainingSet();
@@ -15,17 +14,6 @@ class TrainingSet
     private:
         void aggiungiDoc(const std::string& file,const std::string& cat);
         std::vector<Documento*> vec;
-
-=======
-public:
-    TrainingSet();
-    virtual ~TrainingSet();
-
-protected:
-    void add(Documento* doc);
-private:
-    void aggiungiDoc(const std::string& file,const std::string& cat);
->>>>>>> 4ae41b4bb56a6edfcfd7d1d2097451faa7767663
 };
 
 #endif // TRAININGSET_H

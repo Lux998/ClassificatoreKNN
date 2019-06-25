@@ -23,7 +23,7 @@
 1561477802 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.cpp
 	"Documento.h"
 
-1561479937 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.cpp
+1561481139 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.cpp
 	"KNN.h"
 
 1561480268 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.h
@@ -65,37 +65,33 @@
 	"KNN.h"
 	"DistanzaCos.h"
 
-1561473364 D
-
-<<<<<<< HEAD
-1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\trainingset.cpp
-=======
-1561473364 D
+1561478335 D
 
 1561476364 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\trainingset.cpp
->>>>>>> 4ae41b4bb56a6edfcfd7d1d2097451faa7767663
+
+1561477802 41b4bb56a6edfcfd7d1d2097451faa7767663
 	"TrainingSet.h"
 	<vector>
 	<fstream>
+	"TrainingSet.h"
+	"../Documento.h"
+	<map>
+	<vector>
+	<string>
 
 1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\trainingset.h
 	"../Documento.h"
 
 1561476364 nto.h"
 
-<<<<<<< HEAD
-1561476446 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\trainingset.cpp
-=======
 1561478944 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\trainingset.cpp
->>>>>>> 4ae41b4bb56a6edfcfd7d1d2097451faa7767663
-	"TrainingSet.h"
 
 1561478936 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\include\trainingset.h
 	"../Documento.h"
 	<vector>
 	<fstream>
 
-1561478753 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\distanzafactory.cpp
+1561481085 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\distanzafactory.cpp
 	"DistanzaFactory.h"
 
 1561478520 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\include\distanzafactory.h
@@ -121,22 +117,15 @@
 
 1561476446 
 
-<<<<<<< HEAD
 1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanzafactory.h
 	<string>
 	"Distanza.h"
 	"DistanzaCos.h"
 
 1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanza.h
-=======
-1561478335 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\/include\distanza.h
->>>>>>> 4ae41b4bb56a6edfcfd7d1d2097451faa7767663
-	"../Documento.h"
-	<map>
-	<vector>
-	<string>
 
-<<<<<<< HEAD
+1561478335 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\/include\distanza.h
+
 1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanzacos.h
 	"Distanza.h"
 	<math.h>
@@ -149,11 +138,12 @@
 
 1561479605 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanzafactory.cpp
 	"DistanzaFactory.h"
-=======
+
+1561479605 actory.h"
+
 1561477802 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\\documento.h
 	<map>
 	<string>
 	<fstream>
 	<iostream>
->>>>>>> 4ae41b4bb56a6edfcfd7d1d2097451faa7767663
 
