@@ -7,7 +7,7 @@ class TrainingSet
     public:
         TrainingSet();
         virtual ~TrainingSet();
-
+        std::vector<Documento*> getVec() const;
     protected:
         void add(Documento* doc);
     private:

@@ -28,6 +28,14 @@ KNN::~KNN()
 
 std::string KNN::Classify(Documento d,const std::string& tipo)
 {
-    Distanza* d=DistanzaFactory.Set(tipo)
+    Distanza* dist=DistanzaFactory.Set(tipo);
+    TrainingSet TS();
+    std::vector<Documento*> vec = TS.getVec();
+    std::vector<double> distanze(vec.size());
 
+    for(int i = 0;i<vec.size;i++)
+    {
+        //distanze[i] = distanza(doc,vec[i]);
+
+    }
 }

@@ -33,5 +33,8 @@ void TrainingSet::aggiungiDoc(const std::string& file,const std::string& cat)
     add(new Documento(file,cat));
 }
 
-
+std::vector<Documento*> TrainingSet::getVec() const
+{
+    return vec;
+}
 
