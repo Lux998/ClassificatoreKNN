@@ -32,15 +32,14 @@
 	"include/Distanza.h"
 	"DistanzaFactory.h"
 
-1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.cpp
+1561481325 source:c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.cpp
 	"Classificatore.h"
-	"Documento.h"
-	<math.h>
 
-1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.h
+1561481325 c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.h
 	<string>
 	<vector>
 	"Documento.h"
+	<math.h>
 
 1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\documento.h
 	<map>
@@ -51,13 +50,14 @@
 1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\documento.cpp
 	"Documento.h"
 
-1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\knn.cpp
+1561481334 source:c:\users\basi\documents\progettoknn\classificatoreknn\knn.cpp
 	"KNN.h"
-	"DistanzaFactory.h"
 
-1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\knn.h
+1561481325 c:\users\basi\documents\progettoknn\classificatoreknn\knn.h
 	<string>
 	"Classificatore.h"
+	"include/Distanza.h"
+	"DistanzaFactory.h"
 
 1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\main.cpp
 	<cstdlib>
@@ -67,7 +67,8 @@
 
 1561478335 D
 
-1561476364 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\trainingset.cpp
+1561481520 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\trainingset.cpp
+	"TrainingSet.h"
 
 1561477802 41b4bb56a6edfcfd7d1d2097451faa7767663
 	"TrainingSet.h"
@@ -79,8 +80,10 @@
 	<vector>
 	<string>
 
-1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\trainingset.h
+1561481334 c:\users\basi\documents\progettoknn\classificatoreknn\include\trainingset.h
 	"../Documento.h"
+	<vector>
+	<fstream>
 
 1561476364 nto.h"
 
@@ -117,26 +120,30 @@
 
 1561476446 
 
-1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanzafactory.h
+1561481325 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanzafactory.h
 	<string>
 	"Distanza.h"
 	"DistanzaCos.h"
 
-1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanza.h
+1561481325 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanza.h
+	"../Documento.h"
+	<map>
+	<vector>
+	<string>
 
 1561478335 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\/include\distanza.h
 
-1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanzacos.h
+1561481325 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanzacos.h
 	"Distanza.h"
 	<math.h>
 
 1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanza.cpp
 	"Distanza.h"
 
-1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanzacos.cpp
+1561481325 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanzacos.cpp
 	"DistanzaCos.h"
 
-1561479605 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanzafactory.cpp
+1561481334 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanzafactory.cpp
 	"DistanzaFactory.h"
 
 1561479605 actory.h"
