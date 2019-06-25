@@ -15,13 +15,16 @@
 #define KNN_H
 #include<string>
 #include "Classificatore.h"
+#include "include/Distanza.h"
+#include"DistanzaFactory.h"
 class KNN : public Classificatore
 {
 public:
     KNN();
     KNN(const KNN& orig);
     virtual ~KNN();
-    virtual std::string Classify(Documento D,const std::string& tipo);
+     std::string Classify(Documento D,const std::string& tipo);
+     Distanza* dist;
 private:
 
 };

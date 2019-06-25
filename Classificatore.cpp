@@ -12,7 +12,7 @@
  */
 
 #include "Classificatore.h"
-#include "Documento.h"
-#include<math.h>
+
+
 //std::string Classificatore::Classify(Documento d)=0;
 

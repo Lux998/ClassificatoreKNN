@@ -32,20 +32,20 @@ double DistanzaCos::getDistanza(Documento d1,Documento d2)
          Σ A(k)B(k) / (ΣA(k)^2)^1/2 (ΣB(k)^2)^1/2
 
          */
-        words=this->GetCommonKeys(d1.getBag(),d2.getBag());
-        if(words.size()==0)
-        {
-          //  return 0;
-        }
-        for(unsigned int i=0; i<words.size(); ++i)
-        {
-            numerator+=d1.getBag().at(words[i])*d2.getBag().at(words[i]);
-            std::cout<<"NUMERATORE " << numerator<<std::endl;
-            den1+=d1.getBag().at(words[i])*d1.getBag().at(words[i]);
-            std::cout<<"DEN1 " << den1<<std::endl;
-            den2+=d2.getBag().at(words[i])*d2.getBag().at(words[i]);
-            std::cout<<"DEN2 " << den2 <<std::endl;
-        }
+    words=this->GetCommonKeys(d1.getBag(),d2.getBag());
+    if(words.size()==0)
+    {
+        //  return 0;
+    }
+    for(unsigned int i=0; i<words.size(); ++i)
+    {
+        numerator+=d1.getBag().at(words[i])*d2.getBag().at(words[i]);
+        std::cout<<"NUMERATORE " << numerator<<std::endl;
+        den1+=d1.getBag().at(words[i])*d1.getBag().at(words[i]);
+        std::cout<<"DEN1 " << den1<<std::endl;
+        den2+=d2.getBag().at(words[i])*d2.getBag().at(words[i]);
+        std::cout<<"DEN2 " << den2 <<std::endl;
+    }
 
 
     result =(numerator)/(sqrt(den1)*sqrt(den2));
