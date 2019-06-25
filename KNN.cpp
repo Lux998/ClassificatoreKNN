@@ -76,5 +76,11 @@ std::string KNN::Classify(Documento doc,const std::string& tipo)
     }
     mediaPolitica = mediaPolitica/distanzePolitca.size();
 
-
+    switch(std::min(std::min(mediaFinanza,mediaSport),mediaPolitica))
+    case mediaFinanza:
+        return "finanza";
+    case mediaPolitica:
+        return "politca";
+    case mediaSport:
+        return "sport";
 }
