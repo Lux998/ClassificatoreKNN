@@ -1,19 +1,23 @@
 #include "TrainingSet.h"
 
+std::vector<Documento*> vecPolitica;
+std::vector<Documento*> vecSport;
+std::vector<Documento*> vecFinanza;
 
-std::vector<Documento*> vec;
 
 TrainingSet::TrainingSet()
 {
-    this->aggiungiDoc("ArticoloPolitica1.txt","politica");
-    this->aggiungiDoc("ArticoloPolitica2.txt","politica");
-    this->aggiungiDoc("ArticoloPolitica3.txt","politica");
-    this->aggiungiDoc("ArticoloSport1.txt","sport");
-    this->aggiungiDoc("ArticoloSport2.txt","sport");
-    this->aggiungiDoc("ArticoloSport3.txt","sport");
-    this->aggiungiDoc("ArticoloFinanza1.txt","finanza");
-    this->aggiungiDoc("ArticoloFinanza2.txt","finanza");
-    this->aggiungiDoc("ArticoloFinanza3.txt","finanza");
+    this->aggiungiDocPolitica("ArticoloPolitica1.txt","politica");
+    this->aggiungiDocPolitica("ArticoloPolitica2.txt","politica");
+    this->aggiungiDocPolitica("ArticoloPolitica3.txt","politica");
+
+    this->aggiungiDocSport("ArticoloSport1.txt","sport");
+    this->aggiungiDocSport("ArticoloSport2.txt","sport");
+    this->aggiungiDocSport("ArticoloSport3.txt","sport");
+
+    this->aggiungiDocFinanza("ArticoloFinanza1.txt","finanza");
+    this->aggiungiDocFinanza("ArticoloFinanza2.txt","finanza");
+    this->aggiungiDocFinanza("ArticoloFinanza3.txt","finanza");
 
 }
 
@@ -22,20 +26,36 @@ TrainingSet::~TrainingSet()
 
 }
 
-void TrainingSet::add(Documento* doc)
+void TrainingSet::aggiungiDocPolitica(const std::string& file,const std::string& cat)
 {
-    vec.push_back(doc);
+    vecPolitica.push_back(new Documento(file,cat));
 }
 
-void TrainingSet::aggiungiDoc(const std::string& file,const std::string& cat)
+void TrainingSet::aggiungiDocSport(const std::string& file,const std::string& cat)
 {
-    add(new Documento(file,cat));
+    vecSport.push_back(new Documento(file,cat));
 }
 
-std::vector<Documento*> TrainingSet::getVec() const
+void TrainingSet::aggiungiDocFinanza(const std::string& file,const std::string& cat)
 {
-    return vec;
+    vecFinanza.push_back(new Documento(file,cat));
 }
+
+std::vector<Documento*> TrainingSet::getVecPolitica() const
+{
+    return vecPolitica;
+}
+
+std::vector<Documento*> TrainingSet::getVecSport() const
+{
+    return vecSport;
+}
+
+std::vector<Documento*> TrainingSet::getVecFinanza() const
+{
+    return vecFinanza;
+}
+
 
 
 

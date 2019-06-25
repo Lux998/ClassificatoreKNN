@@ -17,6 +17,8 @@
 #include "Classificatore.h"
 #include "include/Distanza.h"
 #include"DistanzaFactory.h"
+#include "TrainingSet.h"
+
 class KNN : public Classificatore
 {
 public:

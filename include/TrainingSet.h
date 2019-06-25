@@ -8,12 +8,16 @@ class TrainingSet
     public:
         TrainingSet();
         virtual ~TrainingSet();
-        std::vector<Documento*> getVec() const;
-    protected:
-        void add(Documento* doc);
+        std::vector<Documento*> getVecPolitica() const;
+        std::vector<Documento*> getVecSport() const;
+        std::vector<Documento*> getVecFinanza() const;
     private:
-        void aggiungiDoc(const std::string& file,const std::string& cat);
-        std::vector<Documento*> vec;
+        void aggiungiDocFinanza(const std::string& file,const std::string& cat);
+        void aggiungiDocSport(const std::string& file,const std::string& cat);
+        void aggiungiDocPolitica(const std::string& file,const std::string& cat);
+        std::vector<Documento*> vecPolitica;
+        std::vector<Documento*> vecFinanza;
+        std::vector<Documento*> vecSport;
 };
 
 #endif // TRAININGSET_H
