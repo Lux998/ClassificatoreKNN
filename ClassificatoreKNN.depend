@@ -31,46 +31,51 @@
 	<string>
 	"Classificatore.h"
 
-1561473364 source:c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.cpp
+1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.cpp
 	"Classificatore.h"
 	"Documento.h"
 	<math.h>
 
-1561473364 c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.h
+1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\classificatore.h
 	<string>
 	<vector>
 	"Documento.h"
 
-1561476364 c:\users\basi\documents\progettoknn\classificatoreknn\documento.h
+1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\documento.h
 	<map>
 	<string>
 	<fstream>
 	<iostream>
 
-1561476364 source:c:\users\basi\documents\progettoknn\classificatoreknn\documento.cpp
+1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\documento.cpp
 	"Documento.h"
 
-1561394687 source:c:\users\basi\documents\progettoknn\classificatoreknn\knn.cpp
+1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\knn.cpp
 	"KNN.h"
+	"DistanzaFactory.h"
 
-1561388341 c:\users\basi\documents\progettoknn\classificatoreknn\knn.h
+1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\knn.h
 	<string>
 	"Classificatore.h"
 
-1561473364 source:c:\users\basi\documents\progettoknn\classificatoreknn\main.cpp
+1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\main.cpp
 	<cstdlib>
 	"Documento.h"
 	"KNN.h"
+	"DistanzaCos.h"
 
-<<<<<<< HEAD
-1561476364 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\trainingset.cpp
+1561473364 D
+
+1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\trainingset.cpp
 	"TrainingSet.h"
 	<vector>
 	<fstream>
 
-1561476364 c:\users\basi\documents\progettoknn\classificatoreknn\include\trainingset.h
+1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\trainingset.h
 	"../Documento.h"
-=======
+
+1561476364 nto.h"
+
 1561476446 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\trainingset.cpp
 	"TrainingSet.h"
 
@@ -99,5 +104,30 @@
 1561476446 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\include\distanzacos.h
 	"Distanza.h"
 	<math.h>
->>>>>>> knn
+
+1561476446 
+
+1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanzafactory.h
+	<string>
+	"Distanza.h"
+	"DistanzaCos.h"
+
+1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanza.h
+	"../Documento.h"
+	<map>
+	<vector>
+	<string>
+
+1561478014 c:\users\basi\documents\progettoknn\classificatoreknn\include\distanzacos.h
+	"Distanza.h"
+	<math.h>
+
+1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanza.cpp
+	"Distanza.h"
+
+1561478014 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanzacos.cpp
+	"DistanzaCos.h"
+
+1561479605 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\distanzafactory.cpp
+	"DistanzaFactory.h"
 

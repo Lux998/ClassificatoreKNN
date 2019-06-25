@@ -26,8 +26,11 @@ KNN::~KNN()
 }
 
 
-std::string KNN::Classify(Documento d,const std::string& tipo)
+std::string KNN::Classify(Documento doc,const std::string& tipo)
 {
-    Distanza* d=DistanzaFactory.Set(tipo)
+    Distanza* dist=DistanzaFactory.Set(tipo);
+    // ciclo distanza su tutti i documenti
+
+    // categoria definita sulla maggioranza dei documenti vicini
 
 }
