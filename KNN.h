@@ -23,7 +23,7 @@ public:
     KNN();
     KNN(const KNN& orig);
     virtual ~KNN();
-     std::string Classify(Documento D,const std::string& tipo);
+     virtual std::string Classify(Documento D,const std::string& tipo);
      Distanza* dist;
 private:
 

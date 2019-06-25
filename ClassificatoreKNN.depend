@@ -14,7 +14,7 @@
 1561478944 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.cpp
 	"Classificatore.h"
 
-1561479085 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.h
+1561480346 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.h
 	<string>
 	<vector>
 	"Documento.h"
@@ -23,10 +23,10 @@
 1561477802 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.cpp
 	"Documento.h"
 
-1561479116 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.cpp
+1561479937 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.cpp
 	"KNN.h"
 
-1561479195 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.h
+1561480268 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.h
 	<string>
 	"Classificatore.h"
 	"include/Distanza.h"
