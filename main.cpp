@@ -3,10 +3,12 @@
 #include <cstdlib>
 #include "Documento.h"
 #include "KNN.h"
+#include "DistanzaCos.h"
 using namespace std;
 
 int main(int argc, char** argv)
 {
+    Distanza* d;
     std::vector<std::string> ciao;
     ofstream SaveFile("ciao.txt");
     ofstream Test2("Riciao.txt");
@@ -14,13 +16,13 @@ int main(int argc, char** argv)
     Test2<<" a palabutei paa ";
     Test2.close();
     SaveFile.close();
-
+    d=new DistanzaCos();
     Documento D1("ciao.txt");
     Documento D2("Riciao.txt");
     D1.stampa();
     D2.stampa();
     KNN knn;
-    std::cout << knn.Distanza(0,D1,D2);
+    std::cout << d->getDistanza(D1,D2);
 
     //Ciao
     return 0;

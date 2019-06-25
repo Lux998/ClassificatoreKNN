@@ -12,7 +12,7 @@
  */
 
 #include "KNN.h"
-
+#include"DistanzaFactory.h"
 KNN::KNN()
 {
 }
@@ -26,7 +26,8 @@ KNN::~KNN()
 }
 
 
-std::string KNN::Classify(Documento d)
+std::string KNN::Classify(Documento d,const std::string& tipo)
 {
+    Distanza* d=DistanzaFactory.Set(tipo)
 
 }

@@ -22,7 +22,7 @@ public:
     virtual std::string Classify(Documento d)=0;
 //protected:
     double Distanza(int tipo,Documento d1,Documento d2);
-    std::vector<std::string> GetCommonKeys(std::map<std::string,int> m1,std::map<std::string,int> m2) const;
+
 };
 
 #endif /* CLASSIFICATORE_H */

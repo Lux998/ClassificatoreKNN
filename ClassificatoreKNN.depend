@@ -1,32 +1,33 @@
 # depslib dependency file v1.0
-1561471778 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\main.cpp
+1561476446 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\main.cpp
 	<cstdlib>
 	"Documento.h"
 	"KNN.h"
+	"DistanzaCos.h"
 
-1561393188 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.h
+1561476446 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.h
 	<map>
 	<string>
 	<fstream>
 	<iostream>
 
-1561471575 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.cpp
+1561476446 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.cpp
 	"Classificatore.h"
 	"Documento.h"
 	<math.h>
 
-1561471574 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.h
+1561476446 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\classificatore.h
 	<string>
 	<vector>
 	"Documento.h"
 
-1561470701 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.cpp
+1561476446 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.cpp
 	"Documento.h"
 
 1561390796 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.cpp
 	"KNN.h"
 
-1561387511 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.h
+1561477234 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.h
 	<string>
 	"Classificatore.h"
 
@@ -61,6 +62,7 @@
 	"Documento.h"
 	"KNN.h"
 
+<<<<<<< HEAD
 1561476364 source:c:\users\basi\documents\progettoknn\classificatoreknn\src\trainingset.cpp
 	"TrainingSet.h"
 	<vector>
@@ -68,4 +70,34 @@
 
 1561476364 c:\users\basi\documents\progettoknn\classificatoreknn\include\trainingset.h
 	"../Documento.h"
+=======
+1561476446 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\trainingset.cpp
+	"TrainingSet.h"
+
+1561476446 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\include\trainingset.h
+
+1561477545 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\distanzafactory.cpp
+	"DistanzaFactory.h"
+
+1561477087 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\include\distanzafactory.h
+	<string>
+	"Distanza.h"
+	"DistanzaCos.h"
+
+1561476446 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\distanza.cpp
+	"Distanza.h"
+
+1561476446 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\include\distanza.h
+	"../Documento.h"
+	<map>
+	<vector>
+	<string>
+
+1561476446 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\distanzacos.cpp
+	"DistanzaCos.h"
+
+1561476446 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\include\distanzacos.h
+	"Distanza.h"
+	<math.h>
+>>>>>>> knn
 
