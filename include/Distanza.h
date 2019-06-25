@@ -12,9 +12,9 @@ public:
     virtual ~Distanza();
 
 protected:
-
+    std::vector<std::string> GetCommonKeys(std::map<std::string,int> m1,std::map<std::string,int> m2) const;
 private:
-    virtual std::vector<std::string> GetCommonKeys(std::map<std::string,int> m1,std::map<std::string,int> m2) const =0;
+
 
 };
 #endif // DISTANZA_H

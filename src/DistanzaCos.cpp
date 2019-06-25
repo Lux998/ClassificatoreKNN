@@ -32,7 +32,7 @@ double DistanzaCos::getDistanza(Documento d1,Documento d2)
          Σ A(k)B(k) / (ΣA(k)^2)^1/2 (ΣB(k)^2)^1/2
 
          */
-    words=this->GetCommonKeys(d1.getBag(),d2.getBag());
+    words=GetCommonKeys(d1.getBag(),d2.getBag());
     if(words.size()==0)
     {
         //  return 0;
@@ -53,25 +53,3 @@ double DistanzaCos::getDistanza(Documento d1,Documento d2)
     return result;
 }
 
-std::vector<std::string> DistanzaCos::GetCommonKeys(std::map<std::string,int> m1,std::map<std::string,int> m2) const
-{
-    std::map<std::string,int>::iterator iter1=m1.begin();
-    std::map<std::string,int>::iterator iter2=m2.begin();
-    std::vector<std::string> couples;
-    while(iter1!=m1.end())
-    {
-        iter2=m2.begin();
-        while(iter2!=m2.end())
-        {
-            if(iter1->first.compare(iter2->first)==0)
-            {
-                couples.push_back(iter1->first);
-                break;
-            }
-            else
-                iter2++;
-        }
-        iter1++;
-    }
-    return couples;
-}
