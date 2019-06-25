@@ -10,8 +10,8 @@ int main(int argc, char** argv)
     std::vector<std::string> ciao;
     ofstream SaveFile("ciao.txt");
     ofstream Test2("Riciao.txt");
-    SaveFile << "Ciao ciao ciao coez ";
-    Test2<<"Ciao ciao ccoez";
+    SaveFile << "a afa fdfiapd faf aòàfsdoaife qep iosdlmcm ve èàsc ";
+    Test2<<" a palabutei paa ";
     Test2.close();
     SaveFile.close();
 
