@@ -41,8 +41,16 @@
 		<Unit filename="Documento.h" />
 		<Unit filename="KNN.cpp" />
 		<Unit filename="KNN.h" />
+		<Unit filename="include/Distanza.h" />
+		<Unit filename="include/DistanzaCos.h" />
+		<Unit filename="include/DistanzaEuclidea.h" />
+		<Unit filename="include/DistanzaFactory.h" />
 		<Unit filename="include/TrainingSet.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Distanza.cpp" />
+		<Unit filename="src/DistanzaCos.cpp" />
+		<Unit filename="src/DistanzaEuclidea.cpp" />
+		<Unit filename="src/DistanzaFactory.cpp" />
 		<Unit filename="src/TrainingSet.cpp" />
 		<Extensions>
 			<code_completion />

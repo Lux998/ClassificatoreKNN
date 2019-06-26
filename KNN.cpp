@@ -15,6 +15,13 @@
 
 KNN::KNN()
 {
+    TS = TrainingSet();
+    vecFinanza = TS.getVecFinanza();
+    vecSport = TS.getVecSport();
+    vecPolitica = TS.getVecPolitica();
+    distanzeFinanza=std::vector<double>(vecFinanza.size());
+    distanzeSport=std::vector<double>(vecSport.size());
+    distanzePolitica=std::vector<double>(vecPolitica.size());
 }
 
 KNN::KNN(const KNN& orig)
@@ -30,15 +37,9 @@ std::string KNN::Classify(Documento doc,const std::string& tipo)
 {
     double mediaMin;
     dist=DistanzaFactory().Set(tipo);
-    TrainingSet TS = TrainingSet();
 
-    std::vector<Documento*> vecFinanza = TS.getVecFinanza();
-    std::vector<Documento*> vecSport = TS.getVecSport();
-    std::vector<Documento*> vecPolitica = TS.getVecPolitica();
 
-    std::vector<double> distanzeFinanza(vecFinanza.size());
-    std::vector<double> distanzeSport(vecSport.size());
-    std::vector<double> distanzePolitica(vecPolitica.size());
+
 
     for(unsigned int i = 0; i<vecFinanza.size(); i++)
     {

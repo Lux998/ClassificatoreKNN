@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1561486114 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\main.cpp
+1561541128 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\main.cpp
 	<cstdlib>
 	"Documento.h"
 	"KNN.h"
@@ -23,10 +23,10 @@
 1561486512 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\documento.cpp
 	"Documento.h"
 
-1561486982 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.cpp
+1561541065 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.cpp
 	"KNN.h"
 
-1561486903 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.h
+1561540944 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\knn.h
 	<string>
 	"Classificatore.h"
 	"include/Distanza.h"
@@ -90,7 +90,7 @@
 
 1561476364 nto.h"
 
-1561486612 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\trainingset.cpp
+1561487136 source:c:\users\lucap\documents\scheduling\classgit\classificatoreknn\src\trainingset.cpp
 	"TrainingSet.h"
 
 1561485323 c:\users\lucap\documents\scheduling\classgit\classificatoreknn\include\trainingset.h
