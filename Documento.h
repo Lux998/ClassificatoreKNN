@@ -17,6 +17,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+
 class Documento
 {
 public:

@@ -24,7 +24,6 @@ private:
     std::vector<double> distanzeSport;
     std::vector<double> distanzePolitica;
     bool DEBUG_KNN;
-
 };
 
 #endif /* KNN_H */

@@ -4,6 +4,7 @@
 #include<map>
 #include<vector>
 #include<string>
+
 class Distanza
 {
 public:
@@ -13,8 +14,5 @@ public:
 
 protected:
     std::vector<std::string> GetCommonKeys(std::map<std::string,int> m1,std::map<std::string,int> m2) const;
-private:
-
-
 };
 #endif // DISTANZA_H

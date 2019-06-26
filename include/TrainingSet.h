@@ -3,6 +3,7 @@
 #include "../Documento.h"
 #include <vector>
 #include <fstream>
+
 class TrainingSet
 {
 public:

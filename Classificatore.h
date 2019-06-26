@@ -4,6 +4,7 @@
 #include<vector>
 #include "Documento.h"
 #include<math.h>
+
 class Classificatore
 {
 public:
