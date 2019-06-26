@@ -11,6 +11,7 @@ public:
 protected:
 
 private:
+    bool DEBUG_DistCos;
 
 };
 

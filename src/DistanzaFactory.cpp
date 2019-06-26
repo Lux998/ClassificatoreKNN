@@ -2,13 +2,13 @@
 
 DistanzaFactory::DistanzaFactory()
 {
-    //ctor
 }
 
 DistanzaFactory::~DistanzaFactory()
 {
-    //dtor
 }
+
+//Scelta della distanza da parametro
 Distanza* DistanzaFactory::Set(const std::string& typeofDistance)
 {
     Distanza* d=nullptr;

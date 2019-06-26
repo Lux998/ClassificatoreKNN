@@ -2,13 +2,12 @@
 
 DistanzaEuclidea::DistanzaEuclidea()
 {
-    //ctor
 }
 
 DistanzaEuclidea::~DistanzaEuclidea()
 {
-    //dtor
 }
+//Distanza euclidea nella forma sqrt((x(n)-y(n)^2)
 double DistanzaEuclidea::getDistanza(Documento d1,Documento d2)
 {
     double result=0;

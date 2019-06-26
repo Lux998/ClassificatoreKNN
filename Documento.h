@@ -27,7 +27,7 @@ public:
     virtual ~Documento();
     void stampa() const;
     std::map<std::string,int> getBag() const;
-    std::string getCategoria();
+    std::string getCategoria() const;
 private:
     std::map<std::string,int> bag;
     std::string categoria;

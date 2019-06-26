@@ -1,47 +1,63 @@
 #include "TrainingSet.h"
 
-std::vector<Documento*> vecPolitica;
-std::vector<Documento*> vecSport;
-std::vector<Documento*> vecFinanza;
-
-
+//Aggiungo casi di test
 TrainingSet::TrainingSet()
 {
-    this->aggiungiDocPolitica("ArticoloPolitica1.txt","politica");
-    this->aggiungiDocPolitica("ArticoloPolitica2.txt","politica");
-    this->aggiungiDocPolitica("ArticoloPolitica3.txt","politica");
+    DEBUG_TrainingSet = false;
 
-    this->aggiungiDocSport("ArticoloSport1.txt","sport");
-    this->aggiungiDocSport("ArticoloSport2.txt","sport");
-    this->aggiungiDocSport("ArticoloSport3.txt","sport");
+    this->aggiungiDoc("ArticoloPolitica1.txt","politica");
+    this->aggiungiDoc("ArticoloPolitica2.txt","politica");
+    this->aggiungiDoc("ArticoloPolitica3.txt","politica");
 
-    this->aggiungiDocFinanza("ArticoloFinanza1.txt","finanza");
-    this->aggiungiDocFinanza("ArticoloFinanza2.txt","finanza");
-    this->aggiungiDocFinanza("ArticoloFinanza3.txt","finanza");
+    this->aggiungiDoc("ArticoloSport1.txt","sport");
+    this->aggiungiDoc("ArticoloSport2.txt","sport");
+    this->aggiungiDoc("ArticoloSport3.txt","sport");
+
+    this->aggiungiDoc("ArticoloFinanza1.txt","finanza");
+    this->aggiungiDoc("ArticoloFinanza2.txt","finanza");
+    this->aggiungiDoc("ArticoloFinanza3.txt","finanza");
 
 }
+
+TrainingSet::TrainingSet(const TrainingSet& orig)
+{
+   vecFinanza = orig.getVecFinanza();
+   vecSport = orig.getVecSport();
+   vecPolitica = orig.getVecPolitica();
+}
+
 
 TrainingSet::~TrainingSet()
 {
-
+    /*
+        The simplest and most reliable way to deallocate a vector is to declare it on the stack and simply do nothing.
+        C++ guarantees that the destructor of v will be called when the method executes. The destructor of std::vector will ensure any memory it allocated is freed.
+        As long as the T type of the vector<T> has proper C++ deallocation semantics all will be well.
+    */
 }
 
-void TrainingSet::aggiungiDocPolitica(const std::string& file,const std::string& cat)
+void TrainingSet::aggiungiDoc(const std::string& file,const std::string& cat)
 {
-    vecPolitica.push_back(new Documento(file,cat));
-    std::cout<<vecPolitica.back()->getCategoria()<<std::endl;
-}
-
-void TrainingSet::aggiungiDocSport(const std::string& file,const std::string& cat)
-{
-    vecSport.push_back(new Documento(file,cat));
-    std::cout<<vecSport.back()->getCategoria()<<std::endl;
-}
-
-void TrainingSet::aggiungiDocFinanza(const std::string& file,const std::string& cat)
-{
-    vecFinanza.push_back(new Documento(file,cat));
-    std::cout<<vecFinanza.back()->getCategoria()<<std::endl;
+    if(cat == "finanza")
+    {
+        vecFinanza.push_back(new Documento(file,cat));
+        if(DEBUG_TrainingSet)
+            std::cout<<"Cat. aggiunta in finanza:"<<vecFinanza.back()->getCategoria()<<std::endl;
+    }
+    else if(cat == "sport")
+    {
+        vecSport.push_back(new Documento(file,cat));
+        if(DEBUG_TrainingSet)
+            std::cout<<"Cat. aggiunta in sport:"<<vecSport.back()->getCategoria()<<std::endl;
+    }
+    else if(cat == "politica")
+    {
+        vecPolitica.push_back(new Documento(file,cat));
+        if(DEBUG_TrainingSet)
+            std::cout<<"Cat. aggiunta in politica:"<<vecPolitica.back()->getCategoria()<<std::endl;
+    }
+    else
+        throw std::invalid_argument("Categoria non valida");
 }
 
 std::vector<Documento*> TrainingSet::getVecPolitica() const

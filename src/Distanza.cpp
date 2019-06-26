@@ -2,14 +2,13 @@
 
 Distanza::Distanza()
 {
-    //ctor
 }
 
 Distanza::~Distanza()
 {
-    //dtor
 }
 
+//Trova le parole (key) in comune tra le due mappe e ritorna un vettore di stringhe contente le suddette parole
 std::vector<std::string> Distanza::GetCommonKeys(std::map<std::string,int> m1,std::map<std::string,int> m2) const
 {
     std::map<std::string,int>::iterator iter1=m1.begin();

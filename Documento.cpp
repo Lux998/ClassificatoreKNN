@@ -1,6 +1,6 @@
-
 #include "Documento.h"
 
+//Costruttore con categoria ignota
 Documento::Documento(const std::string& FILE)
 {
     std::string word;
@@ -10,12 +10,14 @@ Documento::Documento(const std::string& FILE)
     {
         throw std::string("File no bueno");
     }
+    //Costruisco la bag of words da file
     while(is>>word)
     {
         bag[word]++;
     }
 }
 
+//Costruttore con categoria conosciuta, da parametro
 Documento::Documento(const std::string& FILE, const std::string& cat)
 {
     std::string word;
@@ -34,16 +36,7 @@ Documento::Documento(const std::string& FILE, const std::string& cat)
 
 Documento::Documento(const Documento& orig)
 {
-    /*
-    std::map<std::string,int>::iterator iter;
-    std::cout<<"copio cose"<<std::endl;
-    for(iter=orig.getBag().begin(); iter!=orig.getBag().end(); ++iter)
-    {
-        std::cout<<iter->first <<std::endl;
-
-        bag[iter->first]==orig.getBag()[iter->first];
-    }*/
-    bag=orig.getBag();
+   bag=orig.getBag();
 }
 
 Documento::~Documento()
@@ -68,7 +61,8 @@ void Documento::setCategoria(const std::string& cat)
 {
     categoria=cat;
 }
-std::string Documento::getCategoria()
+
+std::string Documento::getCategoria() const
 {
     return categoria;
 }
